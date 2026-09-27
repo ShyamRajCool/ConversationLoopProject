@@ -22,7 +22,7 @@ Conversation::Conversation(const Conversation& other){
 
             data_ = new Message[capacity_]; //clarify if this can be grouped
             
-            for (int i = 0; i < other.size_; i++){
+            for (std::size_t i = 0; i < other.size_; i++){
                     data_[i] = other.data_[i];      //Simple copy per item
             }
 
@@ -47,7 +47,7 @@ Conversation& Conversation::operator=(const Conversation& other){
                 size_ = other.size_;  
                 data_ = new Message[capacity_]; 
                 if (other.size_ != 0){ //has space but no messages
-                    for (int i = 0; i < other.size_; i++){
+                    for (std::size_t i = 0; i < other.size_; i++){
                         data_[i] = other.data_[i];
                     }
                 }
@@ -100,7 +100,7 @@ void Conversation::append(Message m){
             
             data_ = new Message[capacity_];
 
-            for (int i = 0; i < old_size; i++){ //it stops right before going out of bounds
+            for (std::size_t i = 0; i < old_size; i++){ //it stops right before going out of bounds
                 data_[i] = olddata[i]; //old messages need to be copied
             }
 
@@ -139,7 +139,7 @@ const Message* Conversation:: end() const noexcept{
             return data_;
         }
         else{
-            return data_ + size_ - 1;
+            return data_ + size_;
         }
 }
 
