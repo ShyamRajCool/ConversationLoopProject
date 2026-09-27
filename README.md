@@ -4,15 +4,15 @@ This project was created for ECE 309 Project 2. There was a read me file and spe
 
 role: system
 Be concise.
----
+
 chunk: 5
 role: assistant
 I am doing well, thank you! How can I help you?
----
+
 chunk: 7
 role: assistant
 I can definitely do that for you. Anything else?
----
+
 chunk: 6
 role: assistant
 Goodbye!<|end_conversation|>
