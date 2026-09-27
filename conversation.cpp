@@ -119,6 +119,8 @@ std::size_t Conversation:: size() const noexcept{
         return size_;
 }
 
+
+
 const Message& Conversation:: at(std::size_t i) const{ //assuming that the user know's that the index goes from 0 to size - 1 b.c. of spec
         if (i >= size_){
             throw std::out_of_range("You are out of range, please try again");
@@ -128,12 +130,13 @@ const Message& Conversation:: at(std::size_t i) const{ //assuming that the user 
         }
 }
 
-//Fix and confirm if this is the right implementation
+//beginning pointer
 const Message* Conversation:: begin() const noexcept{
         return data_;
 }
 
-//Fix and confirm if this is the right implementation
+
+//end pointer
 const Message* Conversation:: end() const noexcept{
         if (size_ == 0){
             return data_;
