@@ -1,3 +1,7 @@
+#pragma once
+#include <iostream>
+#include <string>
+
 class SentinelScanner {
 public:
     explicit SentinelScanner(std::string sentinel);
